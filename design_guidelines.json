@@ -1,0 +1,170 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Creative Designer",
+    "mission": "Create a modern, transparent, and luxurious jewellery discovery platform that breaks the 'royal/traditional' cliché.",
+    "principles": [
+      "Fusion over Imitation: Mix Vogue editorial with Fintech transparency.",
+      "Emotion First: Trust and Elegance.",
+      "Content is King: Every piece of jewellery tells a story.",
+      "Zoom In: Macro shots for texture.",
+      "Negative Space: Luxury is the absence of clutter."
+    ]
+  },
+  "design_system": {
+    "typography": {
+      "headings": {
+        "font_family": "Playfair Display, serif",
+        "weights": ["400", "600", "700"],
+        "usage": "Hero titles, Section headers, Product names",
+        "letter_spacing": "tracking-tight",
+        "line_height": "leading-tight"
+      },
+      "body": {
+        "font_family": "Manrope, sans-serif",
+        "weights": ["300", "400", "500", "600"],
+        "usage": "Paragraphs, UI elements, Pricing, Data",
+        "letter_spacing": "tracking-normal",
+        "line_height": "leading-relaxed"
+      },
+      "accents": {
+        "font_family": "Cormorant Garamond, serif",
+        "usage": "Italicized quotes, 'Since 1990' tags, subtle captions"
+      }
+    },
+    "colors": {
+      "theme_strategy": "Light Mode Dominant (Gallery Feel) with 'Midnight' Dark Mode option",
+      "palette": {
+        "primary": {
+          "name": "Deep Emerald",
+          "hex": "#064E3B",
+          "usage": "Primary Actions, Brand Identity, Trust Indicators"
+        },
+        "secondary": {
+          "name": "Muted Gold",
+          "hex": "#D4AF37",
+          "usage": "Accents, Borders, Highlights (Use sparingly, never for text)"
+        },
+        "background": {
+          "light": "#F9FAFB",
+          "dark": "#0F172A",
+          "paper": "#FFFFFF"
+        },
+        "text": {
+          "primary": "#1F2937",
+          "secondary": "#4B5563",
+          "muted": "#9CA3AF"
+        },
+        "status": {
+          "success": "#10B981",
+          "error": "#EF4444",
+          "warning": "#F59E0B"
+        }
+      },
+      "gradients": {
+        "gold_sheen": "linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%)",
+        "emerald_depth": "linear-gradient(to bottom, #064E3B, #065F46)"
+      }
+    },
+    "spacing": {
+      "scale": "Tailwind default but shifted up (p-4 -> p-8)",
+      "container_padding": "px-6 md:px-12 lg:px-24",
+      "section_gap": "gap-16 md:gap-32"
+    },
+    "radius": {
+      "default": "rounded-none",
+      "buttons": "rounded-full",
+      "cards": "rounded-sm"
+    },
+    "shadows": {
+      "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+      "hover": "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+      "glass": "0 8px 32px 0 rgba(31, 38, 135, 0.07)"
+    }
+  },
+  "layout_strategies": {
+    "grid_system": "Bento Grid (Asymmetrical)",
+    "modes": {
+      "marketing": "Mode A: The Tetris Grid (Hero + Supporting + Filler)",
+      "catalogue": "Mode B: High Density Grid (Product Cards)",
+      "profile": "Mode A: Storytelling (Goldsmith photo + Bio + Work)"
+    },
+    "alignment": "Optical alignment. Center headings only for 'Grand' moments. Left align for reading."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-emerald-900 text-white hover:bg-emerald-800 rounded-full px-8 py-3 tracking-wide transition-all duration-300",
+      "secondary": "border border-emerald-900 text-emerald-900 hover:bg-emerald-50 rounded-full px-8 py-3 transition-all duration-300",
+      "ghost": "text-emerald-900 hover:text-emerald-700 hover:bg-transparent underline-offset-4 hover:underline"
+    },
+    "cards": {
+      "product": "group relative bg-white border border-gray-100 hover:border-emerald-100 hover:shadow-hover transition-all duration-500 overflow-hidden",
+      "feature": "bg-gray-50 p-8 border-l-2 border-emerald-900 hover:bg-white transition-colors"
+    },
+    "inputs": {
+      "style": "bg-transparent border-b border-gray-300 focus:border-emerald-900 focus:ring-0 rounded-none px-0 py-3 placeholder:text-gray-400 transition-colors"
+    },
+    "navigation": {
+      "style": "Glassmorphism (backdrop-blur-md bg-white/80) sticky top-0 z-50 border-b border-gray-100"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise overlay on solid backgrounds to prevent 'digital flatness'.",
+    "motion": {
+      "scroll": "Lenis smooth scroll (MANDATORY)",
+      "reveal": "Staggered fade-up for grid items",
+      "hover": "Slow zoom on product images (scale-105)"
+    },
+    "glassmorphism": "Used for 'AI Assistant' chat window and 'Live Price' ticker."
+  },
+  "image_assets": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1558882268-15aa056d885f",
+      "alt": "Elegant model wearing gold jewellery",
+      "position": "Home Page Hero"
+    },
+    "goldsmith_trust": {
+      "url": "https://images.unsplash.com/photo-1764760214881-69e2a3198c11",
+      "alt": "Master goldsmith working in atelier",
+      "position": "About / Trust Section"
+    },
+    "craftsmanship": {
+      "url": "https://images.unsplash.com/photo-1659682699444-9ebad278fbd3",
+      "alt": "Close up of jewellery crafting",
+      "position": "Process Section"
+    },
+    "collection_highlight": {
+      "url": "https://images.unsplash.com/photo-1767249622437-dd837fc5ff3b",
+      "alt": "Editorial shot of gold jewellery",
+      "position": "Featured Collection"
+    },
+    "product_detail": {
+      "url": "https://images.unsplash.com/photo-1591241193546-8c6823c3958a",
+      "alt": "Silver and pearl necklace detail",
+      "position": "Product Page Demo"
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building a 'Modern Luxury' app. It should feel expensive but accessible. Avoid 'Royal' clichés (crowns, heavy purples). Think 'Vogue' meets 'Fintech'.",
+    "critical_rules": [
+      "DO NOT use gradients for text.",
+      "DO NOT use 'Inter' for headings. Use 'Playfair Display'.",
+      "Ensure 'Live Price' ticker is visible but not intrusive (Fintech element).",
+      "The 'Price Breakdown' must be a clean, transparent table, not a hidden modal.",
+      "Use 'Sonner' for all notifications.",
+      "Use 'Lucide-React' for icons (thin strokes)."
+    ],
+    "pages": {
+      "landing": "Hero must be immersive. Use the 'Model' image. Trust indicators (Goldsmith profile) should be prominent.",
+      "catalogue": "Clean grid. Filters on the left (desktop) or drawer (mobile). Focus on images.",
+      "product": "Split screen. Left: Sticky Image Gallery. Right: Details + Price Calculator + Order Intent.",
+      "ai_assistant": "Floating action button (bottom right) that expands into a glassmorphism chat window."
+    }
+  },
+  "universal_guidelines": {
+    "anti_slop": "Avoid generic centered layouts. Use asymmetry. Use negative space.",
+    "interactions": "All buttons must have hover states. Inputs must have focus states.",
+    "accessibility": "Ensure text contrast is high (Charcoal on White).",
+    "testing": "Add data-testid to all interactive elements."
+  }
+}
