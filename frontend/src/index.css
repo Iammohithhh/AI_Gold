@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body text-gray-800 bg-gray-50 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-900 text-white hover:bg-emerald-800 rounded-full px-8 py-3 tracking-wide transition-all duration-300 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply border border-emerald-900 text-emerald-900 hover:bg-emerald-50 rounded-full px-8 py-3 transition-all duration-300 font-medium;
+  }
+  
+  .btn-ghost {
+    @apply text-emerald-900 hover:text-emerald-700 underline-offset-4 hover:underline transition-colors;
+  }
+  
+  .card {
+    @apply bg-white border border-gray-100 hover:border-emerald-100 hover:shadow-hover transition-all duration-500 overflow-hidden;
+  }
+  
+  .input-field {
+    @apply bg-transparent border-b border-gray-300 focus:border-emerald-900 focus:ring-0 focus:outline-none rounded-none px-0 py-3 placeholder:text-gray-400 transition-colors w-full;
+  }
+  
+  .glass {
+    @apply backdrop-blur-md bg-white/80 border border-white/20;
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+  }
+}
+
+/* Smooth scrolling with Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #064E3B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #065F46;
+}
+
+/* Price ticker animation */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+/* Fade animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
