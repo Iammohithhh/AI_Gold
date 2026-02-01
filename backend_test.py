@@ -34,7 +34,10 @@ class JewelleryAPITester:
             if method == 'GET':
                 response = self.session.get(url, headers=headers, params=params, timeout=10)
             elif method == 'POST':
-                response = self.session.post(url, json=data, headers=headers, timeout=10)
+                if params:
+                    response = self.session.post(url, headers=headers, params=params, timeout=10)
+                else:
+                    response = self.session.post(url, json=data, headers=headers, timeout=10)
             elif method == 'PUT':
                 response = self.session.put(url, json=data, headers=headers, timeout=10)
             elif method == 'DELETE':
