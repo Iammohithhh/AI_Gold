@@ -10,9 +10,7 @@
     "react-router-dom": "^6.20.1",
     "lucide-react": "^0.294.0",
     "framer-motion": "^10.16.16",
-    "sonner": "^1.2.4",
-    "@lenis/react": "^1.0.0",
-    "lenis": "^1.0.33"
+    "sonner": "^1.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
