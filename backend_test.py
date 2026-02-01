@@ -94,7 +94,7 @@ class JewelleryAPITester:
             'labour_per_gram': 500,
             'include_gst': True
         }
-        success, data = self.run_test("Price Calculator", "POST", "api/calculate-price", 200, params=params)
+        success, data = self.run_test("Price Calculator", "POST", "api/calculate-price", 200, data=None, params=params)
         if success:
             if 'breakdown' not in data or 'estimate_range' not in data:
                 self.log("❌ Missing breakdown or estimate_range in calculator response", "FAIL")
