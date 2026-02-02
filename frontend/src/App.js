@@ -137,7 +137,7 @@ const Navbar = () => {
 
 // ==================== PRICE TICKER (Currently unused in V1) ====================
 // Keeping for potential future use
-/*
+
 const PriceTicker = () => {
   const [prices, setPrices] = useState(null);
 
@@ -184,7 +184,7 @@ const PriceTicker = () => {
     </div>
   );
 };
-*/
+
 
 // ==================== HOME PAGE ====================
 const HomePage = () => {
@@ -2152,10 +2152,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold" />
                 <a
-                  href="mailto:contact@mohithh20@gmail.com"
+                  href="mailto:@mohithh20@gmail.com"
                   className="hover:text-gold transition-colors"
                 >
-                  contact@mohithh20@gmail.com
+                  mohithh20@gmail.com
                 </a>
 
               </li>
