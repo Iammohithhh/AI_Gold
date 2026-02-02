@@ -82,7 +82,7 @@ const Navbar = () => {
             <div className="w-10 h-10 gold-gradient rounded-full flex items-center justify-center">
               <Gem className="w-5 h-5 text-emerald-900" />
             </div>
-            <span className="font-display text-xl font-semibold text-emerald-900">Heritage Gold</span>
+            <span className="font-display text-xl font-semibold text-emerald-900">Hari Jewellery Works</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
@@ -225,7 +225,7 @@ const HomePage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-32">
           <div className="max-w-2xl stagger-children">
-            <p className="font-accent italic text-gold-dark text-lg mb-4">Crafted with Heritage Since 1990</p>
+            <p className="font-accent italic text-gold-dark text-lg mb-4">Crafted with Heritage Since 2000</p>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-emerald-900 leading-tight mb-6">
               Find Your <br />
               <span className="italic">Perfect Piece</span>
@@ -252,8 +252,8 @@ const HomePage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: Shield, label: 'BIS Certified', value: '100% Hallmarked' },
-              { icon: Award, label: 'Experience', value: '35+ Years' },
-              { icon: Star, label: 'Happy Customers', value: '10,000+' },
+              { icon: Award, label: 'Experience', value: '25+ Years' },
+              { icon: Star, label: 'Happy Customers', value: '1000+' },
               { icon: Gem, label: 'Designs', value: '500+ Unique' }
             ].map((item, i) => (
               <div key={i} className="text-center p-6">
@@ -1670,7 +1670,7 @@ const AboutPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-white">
           <p className="font-accent italic text-gold text-lg mb-4">Our Legacy</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold mb-4">{profile.name}</h1>
-          <p className="text-xl text-gray-200 max-w-2xl">{profile.years_of_experience}+ years of crafting timeless jewellery</p>
+          <p className="text-xl text-gray-200 max-w-2xl"> 25+ years of crafting timeless jewellery</p>
         </div>
       </section>
       
@@ -1680,8 +1680,10 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="font-accent italic text-gold-dark mb-4">Our Story</p>
-              <h2 className="font-display text-4xl font-bold text-emerald-900 mb-6">Three Generations of Excellence</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">{profile.description}</p>
+              <h2 className="font-display text-4xl font-bold text-emerald-900 mb-6">Built on Trust & Craftsmanship</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                  With over 25 years of hands-on experience, our journey began in a single goldsmith workshop built on trust and craftsmanship. Today, we are reimagining that same craft through a modern, guided jewellery experience—making it easier for families to choose, plan, and create jewellery with confidence.
+              </p>
               <p className="text-gray-600 leading-relaxed">
                 Every piece that leaves our workshop carries the weight of tradition and the precision of modern craftsmanship. 
                 We believe in complete transparency – from gold sourcing to final pricing.
@@ -1705,52 +1707,44 @@ const AboutPage = () => {
           <h2 className="font-display text-4xl font-bold text-emerald-900 mb-12 text-center">Our Specializations</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {profile.specializations?.map((spec, i) => (
-              <div key={i} className="bg-white p-8 border-l-2 border-emerald-900 hover:shadow-hover transition-all">
-                <Gem className="w-8 h-8 text-gold mb-4" />
-                <h3 className="font-display text-xl font-semibold text-emerald-900">{spec}</h3>
-              </div>
-            ))}
+          {[
+            'Custom Gold Jewellery',
+            'Old Gold Remodelling',
+            'Traditional & Daily Wear Designs',
+            'Hallmarked Quality Craftsmanship'
+          ].map((spec, i) => (
+            <div key={i} className="bg-white p-8 border-l-2 border-emerald-900 hover:shadow-hover transition-all">
+              <Gem className="w-8 h-8 text-gold mb-4" />
+              <h3 className="font-display text-xl font-semibold text-emerald-900">{spec}</h3>
+            </div>
+          ))}
           </div>
         </div>
       </section>
-      
-      {/* Certifications */}
+
+
+      {/* Visit Workshop */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="font-accent italic text-gold-dark mb-4">Trust & Quality</p>
-              <h2 className="font-display text-4xl font-bold text-emerald-900 mb-6">Certifications & Awards</h2>
-              <div className="space-y-4">
-                {profile.certifications?.map((cert, i) => (
-                  <div key={i} className="flex items-center gap-4 p-4 bg-emerald-50 rounded-sm">
-                    <ShieldCheck className="w-6 h-6 text-emerald-900" />
-                    <span className="font-medium">{cert}</span>
-                  </div>
-                ))}
+          <div className="bg-emerald-900 text-white p-12 rounded-lg max-w-2xl mx-auto text-center">
+            <h3 className="font-display text-3xl font-bold mb-8">Visit Our Workshop</h3>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 justify-center">
+                <MapPin className="w-6 h-6 text-gold mt-1 flex-shrink-0" />
+                <p className="text-left">Gangamma Temple Road, Gajaana Circle,<br />Chintamani, Karnataka</p>
+              </div>
+              <div className="flex items-center gap-4 justify-center">
+                <Phone className="w-6 h-6 text-gold flex-shrink-0" />
+                <a href="tel:+919901907349" className="hover:text-gold transition-colors">+91 9901907349</a>
+              </div>
+              <div className="flex items-center gap-4 justify-center">
+                <Mail className="w-6 h-6 text-gold flex-shrink-0" />
+                <p>{profile.contact_email}</p>
               </div>
             </div>
-            <div className="bg-emerald-900 text-white p-12">
-              <h3 className="font-display text-2xl font-bold mb-6">Visit Our Workshop</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <MapPin className="w-5 h-5 text-gold mt-1" />
-                  <p>{profile.location}</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Phone className="w-5 h-5 text-gold" />
-                  <p>{profile.contact_phone}</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Mail className="w-5 h-5 text-gold" />
-                  <p>{profile.contact_email}</p>
-                </div>
-              </div>
-              <Link to="/contact" className="mt-8 inline-block bg-gold text-emerald-900 hover:bg-gold-light rounded-full px-8 py-3 font-medium transition-all">
-                Contact Us
-              </Link>
-            </div>
+            <Link to="/contact" className="mt-8 inline-block bg-gold text-emerald-900 hover:bg-gold-light rounded-full px-8 py-3 font-medium transition-all">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
@@ -1860,26 +1854,18 @@ const ContactPage = () => {
             </p>
             
             {profile && (
-              <div className="space-y-6">
                 <div className="flex items-start gap-4 p-6 bg-white">
                   <MapPin className="w-6 h-6 text-emerald-900 mt-1" />
                   <div>
                     <h3 className="font-semibold text-emerald-900 mb-1">Visit Our Workshop</h3>
-                    <p className="text-gray-600">{profile.location}</p>
+                    <p className="text-gray-600">Gangamma Temple Road, Gajaana Circle,<br />Chintamani, Karnataka</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-white">
                   <Phone className="w-6 h-6 text-emerald-900 mt-1" />
                   <div>
                     <h3 className="font-semibold text-emerald-900 mb-1">Call Us</h3>
-                    <p className="text-gray-600">{profile.contact_phone}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-6 bg-white">
-                  <Mail className="w-6 h-6 text-emerald-900 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-emerald-900 mb-1">Email Us</h3>
-                    <p className="text-gray-600">{profile.contact_email}</p>
+                    <a href="tel:+919901907349" className="text-gray-600 hover:text-emerald-900 transition-colors">+91 9901907349</a>
                   </div>
                 </div>
               </div>
@@ -2117,10 +2103,10 @@ const Footer = () => {
               <div className="w-10 h-10 gold-gradient rounded-full flex items-center justify-center">
                 <Gem className="w-5 h-5 text-emerald-900" />
               </div>
-              <span className="font-display text-xl font-semibold">Heritage Gold</span>
+              <span className="font-display text-xl font-semibold">Hari Jewellery Works</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Three generations of master goldsmiths crafting timeless pieces with transparency and trust.
+                25+ years of trusted craftsmanship, making it easier for families to choose and create jewellery with confidence.
             </p>
             <div className="flex gap-4">
               {['facebook', 'instagram', 'twitter'].map(social => (
@@ -2156,22 +2142,22 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-0.5" />
-                <span>Jewellery Lane, T. Nagar, Chennai - 600017</span>
+                <span>Gangamma Temple Road, Gajaana Circle, Chintamani, Karnataka</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+919901907349" className="hover:text-gold transition-colors">+91 9901907349</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold" />
-                <span>contact@heritagegold.in</span>
+                <span>contact@mohithh20@gmail.com</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">© 2024 Heritage Gold Artisans. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© 2024 Hari Jewellery Works. All rights reserved.</p>
           <p className="text-sm text-gray-500">
             Powered by AI • Prices are estimates only
           </p>
