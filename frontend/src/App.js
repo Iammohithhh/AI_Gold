@@ -1854,6 +1854,7 @@ const ContactPage = () => {
             </p>
             
             {profile && (
+                <div>
                 <div className="flex items-start gap-4 p-6 bg-white">
                   <MapPin className="w-6 h-6 text-emerald-900 mt-1" />
                   <div>
@@ -2150,7 +2151,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold" />
-                <span>contact@mohithh20@gmail.com</span>
+                <a
+                  href="mailto:contact@mohithh20@gmail.com"
+                  className="hover:text-gold transition-colors"
+                >
+                  contact@mohithh20@gmail.com
+                </a>
+
               </li>
             </ul>
           </div>
@@ -2159,7 +2166,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">© 2024 Hari Jewellery Works. All rights reserved.</p>
           <p className="text-sm text-gray-500">
-            Powered by AI • Prices are estimates only
+            Guided jewellery experience • Prices are estimates only
+
           </p>
         </div>
       </div>
