@@ -359,8 +359,8 @@ const HomePage = () => {
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute -bottom-8 -right-8 bg-emerald-900 text-white p-8">
-                  <p className="font-display text-4xl font-bold">{profile.years_of_experience}+</p>
-                  <p className="text-sm text-gray-300">Years of Excellence</p>
+                  <p className="font-display text-4xl font-bold">{25+ }+</p>
+                  <p className="text-sm text-gray-300">Years of Craftsmanship</p>
                 </div>
               </div>
 
