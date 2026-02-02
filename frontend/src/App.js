@@ -10,7 +10,13 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL;
+// API URL - set REACT_APP_BACKEND_URL in Vercel environment variables
+const API_URL = process.env.REACT_APP_BACKEND_URL || '';
+
+// Show warning in development if API URL is not configured
+if (!API_URL && process.env.NODE_ENV === 'development') {
+  console.warn('REACT_APP_BACKEND_URL is not set. API calls will fail.');
+}
 
 // ==================== CONTEXT ====================
 const CartContext = React.createContext();
