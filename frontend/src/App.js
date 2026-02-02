@@ -1967,7 +1967,7 @@ const ContactPage = () => {
 
 // ==================== AI CHAT WIDGET (Hidden for V1) ====================
 // Keeping the component code for potential future use
-
+/*
 const AIChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -2091,7 +2091,7 @@ const AIChatWidget = () => {
     </>
   );
 };
-
+*/
 
 // ==================== FOOTER ====================
 const Footer = () => {
